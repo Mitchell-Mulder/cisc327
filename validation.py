@@ -99,7 +99,7 @@ def validate_amount(num, is_agent=False):
         return False
     elif (not is_agent) and num > 1000000:
         return False
-    elif is_agent and num > 999999999:
+    elif is_agent and num > 99999999:
         return False
     else:
         return True
