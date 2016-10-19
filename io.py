@@ -1,6 +1,13 @@
 import datetime
 
 
+def prompt_for_input():
+    """
+    Prompt the user for input and return their response (with whitespace trimmed).
+    """
+    return raw_input('> ').strip()
+
+
 def write_summary_file(records):
     """
     Write the stored list of records from the current session to a timestamped transaction summary file.

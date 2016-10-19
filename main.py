@@ -34,13 +34,6 @@ def parse_line(line):
     return line_parts
 
 
-def prompt_for_input():
-    """
-    Prompt the user for input and return their response (with whitespace trimmed).
-    """
-    return raw_input('> ').strip()
-
-
 def run_agent_mode():
     """
     Prompt the user for commands and listen for the response.
@@ -50,7 +43,7 @@ def run_agent_mode():
     print 'Logged in as agent'
     records = []
     while True:
-        args = parse_line(prompt_for_input())
+        args = parse_line(io.prompt_for_input())
         if args[0] == 'logout':
             io.write_summary_file(records)
             print 'Logged out'
@@ -102,7 +95,7 @@ def run_atm_mode():
     print 'Logged in as ATM'
     records = []
     while True:
-        args = parse_line(prompt_for_input())
+        args = parse_line(io.prompt_for_input())
         if args[0] == 'logout':
             io.write_summary_file(records)
             print 'Logged out'
@@ -140,11 +133,11 @@ def run_main_loop():
     commands, and begins the respective mode.
     """
     while True:
-        prompt = prompt_for_input().lower()
+        prompt = io.prompt_for_input().lower()
         if prompt == 'login':
             while True:
                 print 'Log in as ATM or agent?'
-                mode_prompt = prompt_for_input().lower()
+                mode_prompt = io.prompt_for_input().lower()
                 if mode_prompt == 'atm':
                     run_atm_mode()
                     break
