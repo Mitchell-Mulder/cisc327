@@ -74,6 +74,7 @@ def run_agent_mode():
             else:
                 records.append(args)
         elif args[0] == 'create':
+            # Flatten elements 2..end into element 2 (for spaces in names)
             args = args[:2] + [" ".join(args[2:])]
             problem = validation.validate_creation(args)
             if problem:
@@ -81,6 +82,7 @@ def run_agent_mode():
             else:
                 records.append(args)
         elif args[0] == 'delete':
+            # Flatten elements 2..end into element 2 (for spaces in names)
             args = args[:2] + [" ".join(args[2:])]
             problem = validation.validate_deletion(args)
             if problem:
