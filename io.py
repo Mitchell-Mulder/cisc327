@@ -1,7 +1,10 @@
 import datetime
 
 
-def write_log_file(records):
+def write_summary_file(records):
+    """
+    Write the stored list of records from the current session to a timestamped transaction summary file.
+    """
     time = datetime.datetime.now().isoformat()
     time = time.replace(":", "_")
     logfile = open("TSF{}.txt".format(time), "w")

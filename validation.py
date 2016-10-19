@@ -1,6 +1,6 @@
 def validate_transfer(args, is_agent):
     """
-    
+    Validate the arguments for a "transfer" command.
     """
     if not len(args) == 4:
         return 'Error: Invalid number of arguments'
@@ -15,6 +15,9 @@ def validate_transfer(args, is_agent):
 
 
 def validate_withdrawal(args, is_agent):
+    """
+    Validate the arguments for a "withdraw" command.
+    """
     if not len(args) == 3:
         return 'Error: Invalid number of arguments'
     elif not validate_account_number(args[1]):
@@ -26,6 +29,9 @@ def validate_withdrawal(args, is_agent):
 
 
 def validate_deposit(args, is_agent):
+    """
+    Validate the arguments for a "deposit" command.
+    """
     if not len(args) == 3:
         return 'Error: Invalid number of arguments'
     elif not validate_account_number(args[1]):
@@ -37,6 +43,9 @@ def validate_deposit(args, is_agent):
 
 
 def validate_creation(args):
+    """
+    Validate the arguments for a "create" command.
+    """
     if len(args) < 3:
         return 'Error: Invalid number of arguments'
     elif not validate_account_number(args[1], False):
@@ -50,6 +59,9 @@ def validate_creation(args):
 
 
 def validate_deletion(args):
+    """
+    Validate the arguments for a "delete" command.
+    """
     if len(args) < 3:
         return 'Error: Invalid number of arguments'
     elif not validate_account_number(args[1]):
@@ -63,6 +75,10 @@ def validate_deletion(args):
 
 
 def account_number_exists(account_num):
+    """
+    Check whether an account number exists in the accounts list file.
+    Returns True if the account number is found, and False otherwise.
+    """
     account_num = int(account_num)
 
     with open('accounts.txt') as account_file:
@@ -74,6 +90,13 @@ def account_number_exists(account_num):
 
 
 def validate_account_number(num, should_exist=True):
+    """
+    Validate an account number parameter.
+    If should_exist is True, the account number is expected to be in
+        the accounts list and will only be considered valid if so.
+    If should_exist is False, the account number is expected not to be
+        in the accounts list, and will be considered invalid if so.
+    """
     if len(num) != 8:
         return False
     elif num[0] == '0':
@@ -86,6 +109,9 @@ def validate_account_number(num, should_exist=True):
 
 
 def validate_name(name):
+    """
+    Validate an account name parameter.
+    """
     name = name.strip()
     if len(name) > 30 or len(name) < 3:
         return False
@@ -94,6 +120,11 @@ def validate_name(name):
 
 
 def validate_amount(num, is_agent=False):
+    """
+    Validate an amount parameter.
+    If is_agent is True, the range of valid amounts is < $1M.
+    If is_agent is False, the range of valid amounts is < $10k.
+    """
     num = int(num)
     if num < 0:
         return False
