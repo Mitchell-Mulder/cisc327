@@ -1,11 +1,13 @@
 import datetime
 
 
-def prompt_for_input():
+def prompt_for_input(prepend_prompt=''):
     """
     Prompt the user for input and return their response (with whitespace trimmed).
     """
-    return raw_input('> ').strip()
+    if not prepend_prompt == '':
+        prepend_prompt += ' '
+    return raw_input(prepend_prompt + '> ').strip()
 
 
 def write_summary_file(records):

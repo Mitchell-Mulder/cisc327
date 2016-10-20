@@ -18,20 +18,8 @@ is written.
 
 """
 
+import commands
 import io
-import validation
-
-
-def parse_line(line):
-    """
-    Split a line of input by spaces, normalizing the command parameter.
-    """
-    line_parts = line.strip().split()
-    if len(line_parts) > 0:
-        line_parts[0] = line_parts[0].lower()
-    else:
-        line_parts = ['']
-    return line_parts
 
 
 def run_agent_mode():
@@ -43,45 +31,21 @@ def run_agent_mode():
     print 'Logged in as agent'
     records = []
     while True:
-        args = parse_line(io.prompt_for_input())
-        if args[0] == 'logout':
+        line = io.prompt_for_input().lower()
+        if line == 'logout':
             io.write_summary_file(records)
             print 'Logged out'
             return
-        elif args[0] == 'transfer':
-            problem = validation.validate_transfer(args, True)
-            if problem:
-                print problem
-            else:
-                records.append(args)
-        elif args[0] == 'withdraw':
-            problem = validation.validate_withdrawal(args, True)
-            if problem:
-                print problem
-            else:
-                records.append(args)
-        elif args[0] == 'deposit':
-            problem = validation.validate_deposit(args, True)
-            if problem:
-                print problem
-            else:
-                records.append(args)
-        elif args[0] == 'create':
-            # Flatten elements 2..end into element 2 (for spaces in names)
-            args = args[:2] + [" ".join(args[2:])]
-            problem = validation.validate_creation(args)
-            if problem:
-                print problem
-            else:
-                records.append(args)
-        elif args[0] == 'delete':
-            # Flatten elements 2..end into element 2 (for spaces in names)
-            args = args[:2] + [" ".join(args[2:])]
-            problem = validation.validate_deletion(args)
-            if problem:
-                print problem
-            else:
-                records.append(args)
+        elif line == 'transfer':
+            records.append(commands.transfer(True))
+        elif line == 'withdraw':
+            records.append(commands.withdraw(True))
+        elif line == 'deposit':
+            records.append(commands.deposit(True))
+        elif line == 'create':
+            records.append(commands.create())
+        elif line == 'delete':
+            records.append(commands.delete())
         else:
             print 'Error: command not recognized'
 
@@ -94,33 +58,27 @@ def run_atm_mode():
     """
     print 'Logged in as ATM'
     records = []
+    withdrawals = {}
     while True:
-        args = parse_line(io.prompt_for_input())
-        if args[0] == 'logout':
+        line = io.prompt_for_input().lower()
+        if line == 'logout':
             io.write_summary_file(records)
             print 'Logged out'
             return
-        elif args[0] == 'transfer':
-            problem = validation.validate_transfer(args, False)
-            if problem:
-                print problem
+        elif line == 'transfer':
+            records.append(commands.transfer(False))
+        elif line == 'withdraw':
+            result = commands.withdraw(False, withdrawals)
+            records.append(result)
+            if result[1] in withdrawals:
+                withdrawals[result[1]] += result[2]
             else:
-                records.append(args)
-        elif args[0] == 'withdraw':
-            problem = validation.validate_withdrawal(args, False)
-            if problem:
-                print problem
-            else:
-                records.append(args)
-        elif args[0] == 'deposit':
-            problem = validation.validate_deposit(args, False)
-            if problem:
-                print problem
-            else:
-                records.append(args)
-        elif args[0] == 'create':
+                withdrawals[result[1]] = result[2]
+        elif line == 'deposit':
+            records.append(commands.deposit(False))
+        elif line == 'create':
             print 'Error: privileged command'
-        elif args[0] == 'delete':
+        elif line == 'delete':
             print 'Error: privileged command'
         else:
             print 'Error: command not recognized'
