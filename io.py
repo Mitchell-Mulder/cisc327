@@ -34,6 +34,6 @@ def write_summary_file(records):
         else:
             logfile.write("DL {} 00000000 000 {}\n".format(records[i][1],
                                                            records[i][2]))
-    logfile.write('ES\n')
+    logfile.write('ES 00000000 00000000 000 ***\n')
     logfile.close()
     return
