@@ -1,0 +1,6 @@
+login
+atm
+deposit
+1010101010
+1000
+logout

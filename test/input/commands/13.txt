@@ -1,0 +1,6 @@
+login
+agent
+create
+12345678
+BM
+logout

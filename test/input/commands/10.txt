@@ -1,0 +1,9 @@
+login
+agent
+create
+12345678
+Bryce Marshall
+deposit
+12345678
+1000
+logout

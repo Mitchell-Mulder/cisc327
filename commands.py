@@ -13,7 +13,7 @@ def prompt_for_account_number(prompt_message, error_message, should_exist=True):
             print 'Error: ' + error_message
             number = io.prompt_for_input(prompt_message)
     else:
-        while (not validation.validate_account_number(number)) or validation.account_number_exists(number):
+        while (not validation.validate_account_number(number, False)) or validation.account_number_exists(number):
             print 'Error: ' + error_message
             number = io.prompt_for_input(prompt_message)
     return int(number)
