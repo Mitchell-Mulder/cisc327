@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 
 CISC 327 Assignment 2
@@ -20,6 +22,7 @@ is written.
 
 import commands
 import io
+import sys
 
 
 def run_agent_mode():
@@ -33,7 +36,7 @@ def run_agent_mode():
     while True:
         line = io.prompt_for_input().lower()
         if line == 'logout':
-            io.write_summary_file(records)
+            io.write_summary_file(records, sys.argv[2])
             print 'Logged out'
             return
         elif line == 'transfer':
@@ -62,7 +65,7 @@ def run_atm_mode():
     while True:
         line = io.prompt_for_input().lower()
         if line == 'logout':
-            io.write_summary_file(records)
+            io.write_summary_file(records, sys.argv[2])
             print 'Logged out'
             return
         elif line == 'transfer':
@@ -91,21 +94,25 @@ def run_main_loop():
     commands, and begins the respective mode.
     """
     while True:
-        prompt = io.prompt_for_input().lower()
-        if prompt == 'login':
-            while True:
-                print 'Log in as ATM or agent?'
-                mode_prompt = io.prompt_for_input().lower()
-                if mode_prompt == 'atm':
-                    run_atm_mode()
-                    break
-                elif mode_prompt == 'agent':
-                    run_agent_mode()
-                    break
-                else:
-                    print 'Error: invalid mode'
-        else:
-            print 'Error: command not recognized'
+        try:
+            prompt = io.prompt_for_input().lower()
+            if prompt == 'login':
+                while True:
+                    print 'Log in as ATM or agent?'
+                    mode_prompt = io.prompt_for_input().lower()
+                    if mode_prompt == 'atm':
+                        run_atm_mode()
+                        break
+                    elif mode_prompt == 'agent':
+                        run_agent_mode()
+                        break
+                    else:
+                        print 'Error: invalid mode'
+            else:
+                print 'Error: command not recognized'
+        except EOFError:
+            return
 
 
-run_main_loop()
+if __name__ == "__main__":
+    run_main_loop()

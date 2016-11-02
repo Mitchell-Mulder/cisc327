@@ -1,2 +1,4 @@
 *.pyc
 TSF*.txt
+test/output/logs/*.txt.log
+test/output/transactions/*.txt

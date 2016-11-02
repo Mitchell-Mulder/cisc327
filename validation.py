@@ -1,3 +1,6 @@
+import sys
+
+
 def account_number_exists(account_num):
     """
     Check whether an account number exists in the accounts list file.
@@ -5,8 +8,7 @@ def account_number_exists(account_num):
     """
     try:
         account_num = int(account_num)
-
-        with open('accounts.txt') as account_file:
+        with open(sys.argv[1]) as account_file:
             for existing in account_file:
                 if account_num == int(existing):
                     return True

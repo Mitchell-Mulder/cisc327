@@ -1,4 +1,3 @@
-import datetime
 
 
 def prompt_for_input(prepend_prompt=''):
@@ -10,13 +9,11 @@ def prompt_for_input(prepend_prompt=''):
     return raw_input(prepend_prompt + '> ').strip()
 
 
-def write_summary_file(records):
+def write_summary_file(records, path):
     """
     Write the stored list of records from the current session to a timestamped transaction summary file.
     """
-    time = datetime.datetime.now().isoformat()
-    time = time.replace(":", "_")
-    logfile = open("TSF{}.txt".format(time), "w")
+    logfile = open(path, "w")
     for i in range(0, len(records)):
         transaction = records[i][0]
         if transaction == "transfer":
