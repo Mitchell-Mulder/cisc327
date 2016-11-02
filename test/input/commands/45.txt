@@ -1,0 +1,7 @@
+login
+atm
+transfer
+1o101010
+10101011
+1000
+logout
