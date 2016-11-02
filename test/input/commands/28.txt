@@ -2,5 +2,5 @@ login
 agent
 deposit
 10101010
-100000
+1000
 logout
