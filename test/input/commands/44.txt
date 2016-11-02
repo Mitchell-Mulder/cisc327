@@ -2,6 +2,3 @@ login
 atm
 transfer
 101010101
-10101011
-1000
-logout

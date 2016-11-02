@@ -1,5 +1,5 @@
 *.pyc
 TSF*.txt
-test/output/logs/*.txt.log
-test/output/transactions/*.txt
+test/output
+test/results_*.txt
 .idea/
