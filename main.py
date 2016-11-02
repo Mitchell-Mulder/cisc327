@@ -42,7 +42,7 @@ def run_agent_mode():
         elif line == 'transfer':
             records.append(commands.transfer(True))
         elif line == 'withdraw':
-            records.append(commands.withdraw(True))
+            records.append(commands.withdraw(True, {}))
         elif line == 'deposit':
             records.append(commands.deposit(True))
         elif line == 'create':
