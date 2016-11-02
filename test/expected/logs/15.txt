@@ -1,5 +1,5 @@
 > Log in as ATM or agent?
 > Logged in as agent
-> Logged out
+> Enter account number > Enter name > Account creation successful
+> Logged out 
 > 
-

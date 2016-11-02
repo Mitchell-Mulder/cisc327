@@ -1,5 +1,4 @@
 > Log in as ATM or agent?
 > Logged in as agent
-> Logged out
-> 
-
+> Account number > Name > Error : Invalid name 
+Name >  
