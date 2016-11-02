@@ -1,0 +1,7 @@
+> login
+Log in as ATM or agent?
+> ATM
+Logged in as ATM
+> logout
+Logged out
+

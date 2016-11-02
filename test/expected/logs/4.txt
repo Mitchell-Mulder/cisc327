@@ -1,0 +1,6 @@
+> login
+Log in as ATM or agent?
+> atm
+Logged in as ATM
+> create
+
