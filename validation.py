@@ -42,7 +42,7 @@ def validate_name(name):
     Validate an account name parameter.
     """
     name = name.strip()
-    if (len(name) > 30 or len(name) < 3) and name.isalnum():
+    if len(name) > 30 or len(name) < 3 or not name.isalnum():
         return False
     else:
         return True
