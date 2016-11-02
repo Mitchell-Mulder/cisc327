@@ -3,4 +3,7 @@ Log in as ATM or agent?
 > atm
 Logged in as ATM
 > create
-
+Error: priveleged command
+> delete
+Error: priveleged command
+>

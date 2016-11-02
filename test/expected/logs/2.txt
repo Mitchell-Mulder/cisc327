@@ -4,4 +4,5 @@ Log in as ATM or agent?
 Logged in as agent
 > logout
 Logged out
+>
 

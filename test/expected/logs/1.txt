@@ -1,2 +1,3 @@
-> 
+> logiin
+Exception: command not recognized
 
