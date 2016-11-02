@@ -1,9 +1,8 @@
 #!/bin/bash
 
-chdir output/logs
-for i in *.log
+for i in $(ls test/output/transactions)
 do
     echo "Checking outputs of test $i"
-    diff ../transactions/$i.txt ../../expected/transactions/$i.txt
-    diff ./$i.log ../../expected/logs/$i.log
+    diff test/output/transactions/$i test/expected/transactions/test$i
+    diff test/output/logs/$i.log test/expected/logs/$i.log
 done
