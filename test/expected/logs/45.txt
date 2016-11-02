@@ -1,5 +1,4 @@
 > Log in as ATM or agent?
-> Logged in as agent
-> Logged out
-> 
-
+> Logged in as ATM
+> From account > Error: Invalid first account number
+From account >
