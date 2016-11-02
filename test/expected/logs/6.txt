@@ -1,3 +1,2 @@
-> create
-Exception: command not recognized
->
+> Error: command not recognized
+

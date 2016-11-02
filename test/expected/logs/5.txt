@@ -1,9 +1,3 @@
-> login
-Login as ATM or agent?
-> agent
-Logged in as agent
-> login
-Cannot log in while logged in
-> logout
-Logged out
->
+> Login as ATM or agent?
+> Logged in as agent
+> Error: command not recognized >
