@@ -2,5 +2,3 @@ login
 atm
 withdraw
 12345678
-1000
-logout

@@ -1,8 +1,3 @@
 login
 atm
 create
-12345678
-Bryce Marshall
-delete
-12345678
-logout

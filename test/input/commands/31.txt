@@ -2,5 +2,3 @@ login
 atm
 deposit
 12345678
-1000
-logout

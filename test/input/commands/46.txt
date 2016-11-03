@@ -3,5 +3,3 @@ atm
 transfer
 10101010
 00101011
-1000
-logout
