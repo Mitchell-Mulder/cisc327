@@ -21,12 +21,14 @@ done
 
 DATE=$(date +%F_%T)
 OUTFILE=test/results_${DATE}.txt
+echo "Creating summary file"
 echo "" > ${OUTFILE}
 for i in $(ls test/expected/transactions)
 do
-    echo "Checking outputs of test $i" >> ${OUTFILE}
+    echo "Comparing transaction summary file for test $i" >> ${OUTFILE}
     diff test/output/transactions/$i test/expected/transactions/$i >> ${OUTFILE}
     if [ -f test/expected/logs/$i ]; then
+        echo "Comparing output log for test $i" >> ${OUTFILE}
         diff test/output/logs/$i.log test/expected/logs/$i >> ${OUTFILE}
     fi
 done
