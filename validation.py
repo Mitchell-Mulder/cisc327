@@ -43,7 +43,7 @@ def validate_name(name):
     Validate an account name parameter.
     """
     name = name.strip()
-    m = re.search('[a-zA-Z0-9 ]{3,30}', name)
+    m = re.search('^[a-zA-Z0-9 ]{3,30}$', name)
     if m is None:
         return False
     else:
