@@ -1,3 +1,4 @@
-> Login as ATM or agent?
+> Log in as ATM or agent?
 > Logged in as agent
-> Error: command not recognized >
+> Error: command not recognized
+>
