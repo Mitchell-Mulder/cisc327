@@ -1,7 +1,0 @@
-login
-agent
-delete
-12345678
-Bryce Marshall
-withdraw
-12345678

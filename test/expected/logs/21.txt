@@ -1,5 +1,0 @@
-> Log in as ATM or agent?
-> Logged in as agent
-> Account number > Account deletion successful 
-> Account number > Invalid account number
-Account number >
