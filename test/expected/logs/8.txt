@@ -1,12 +1,5 @@
-> login
-Log in as ATM or agent?
-> agent
-Logged in as agent
-> create
-Account number 12345678
-Name Bryce Marshall
-Account created
-> logout
-Logged out
->
+> Log in as ATM or agent?
+> Logged in as agent
+> Error: invalid account number 
+> 
 

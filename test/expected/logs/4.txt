@@ -1,9 +1,6 @@
-> login
-Log in as ATM or agent?
-> atm
-Logged in as ATM
-> create
-Error: priveleged command
-> delete
-Error: priveleged command
->
+> Log in as ATM or agent?
+> Logged in as ATM
+> Error: priveleged command
+> Error: priveleged command
+> Logged out
+> 
