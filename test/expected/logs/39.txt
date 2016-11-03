@@ -1,4 +1,4 @@
 > Log in as ATM or agent?
 > Logged in as ATM
-> Account number > Amount > Withdrawal successful
->
+> Account number > Amount > Error: Invalid amount
+Amount >
