@@ -27,10 +27,10 @@ for i in $(ls test/expected/logs)
 do
     echo "Comparing output log for test $i"
     echo "Comparing output log for test $i" >> ${OUTFILE}
-    diff test/output/logs/$i.log test/expected/logs/$i >> ${OUTFILE}
+    diff -b test/output/logs/$i.log test/expected/logs/$i >> ${OUTFILE}
     if [ -f test/expected/transactions/$i ]; then
         echo "Comparing transaction summary file for test $i"
         echo "Comparing transaction summary file for test $i" >> ${OUTFILE}
-        diff test/output/transactions/$i test/expected/transactions/$i >> ${OUTFILE}
+        diff -b test/output/transactions/$i test/expected/transactions/$i >> ${OUTFILE}
     fi
 done
