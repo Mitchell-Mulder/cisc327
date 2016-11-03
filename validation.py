@@ -60,7 +60,7 @@ def validate_amount(num, is_agent=False, session_withdrawals=0):
         num = int(num)
         if num < 0:
             return False
-        elif (not is_agent) and num + session_withdrawals > 1000000:
+        elif (not is_agent) and num + session_withdrawals > 100000:
             return False
         elif is_agent and num > 99999999:
             return False
