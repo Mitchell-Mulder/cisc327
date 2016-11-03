@@ -1,4 +1,5 @@
 > Log in as ATM or agent?
 > Logged in as agent
-> Error: invalid account number 
+> Account number > Account name > Account creation successful
+> Logged out
 >

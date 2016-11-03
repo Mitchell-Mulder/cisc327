@@ -2,5 +2,4 @@
 > Logged in as agent
 > Account number > Amount > Deposit successful
 > Logged out
-> 
-
+>
