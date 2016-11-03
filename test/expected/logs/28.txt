@@ -1,5 +1,6 @@
 > Log in as ATM or agent?
 > Logged in as agent
+> Account number > Amount > Deposit successful
 > Logged out
 > 
 
