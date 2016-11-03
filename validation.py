@@ -1,4 +1,5 @@
 import sys
+import re
 
 
 def account_number_exists(account_num):
@@ -42,7 +43,8 @@ def validate_name(name):
     Validate an account name parameter.
     """
     name = name.strip()
-    if len(name) > 30 or len(name) < 3 or not name.isalnum():
+    m = re.search('[[:digit:][:alpha:]\s]{3,30}', name)
+    if m is None:
         return False
     else:
         return True
