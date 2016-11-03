@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # CLEAN UP AND PREPARE FOR TEST
+# ---
+# Delete any output folders remaining from previous tests
 
 rm -rf test/output
 mkdir test/output
@@ -9,6 +11,10 @@ mkdir test/output/transactions
 
 
 # RUN TESTS
+# ---
+# Start the program, using a folder of input accounts files and a folder of
+# files containing standard input to be used, writing the transaction
+# summary file and standard output to a pair of folders
 
 for i in $(ls test/input/commands)
 do
@@ -18,6 +24,10 @@ done
 
 
 # CREATE SUMMARY FILE
+# ---
+# For each test, compare the two sets of files and store the diff in a file.
+# Compare the transaction summary file, as well as the output log, with
+# what was expected for the test.
 
 DATE=$(date +%F_%T)
 OUTFILE=test/results_${DATE}.txt
