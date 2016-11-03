@@ -1,5 +1,5 @@
 > Log in as ATM or agent?
 > Logged in as agent
-> Account number > Account deletion successful 
+> Account number > Account name > Account deletion successful
 > Logged out
-> 
+>
