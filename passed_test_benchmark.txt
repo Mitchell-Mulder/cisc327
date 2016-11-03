@@ -1,0 +1,63 @@
+
+Comparing output log for test 1.txt
+Comparing output log for test 10.txt
+Comparing output log for test 11.txt
+Comparing output log for test 12.txt
+Comparing output log for test 13.txt
+Comparing output log for test 14.txt
+Comparing output log for test 15.txt
+Comparing transaction summary file for test 15.txt
+Comparing output log for test 16.txt
+Comparing transaction summary file for test 16.txt
+Comparing output log for test 17.txt
+Comparing output log for test 18.txt
+Comparing output log for test 19.txt
+Comparing transaction summary file for test 19.txt
+Comparing output log for test 2.txt
+Comparing transaction summary file for test 2.txt
+Comparing output log for test 20.txt
+Comparing output log for test 23.txt
+Comparing output log for test 24.txt
+Comparing output log for test 25.txt
+Comparing output log for test 26.txt
+Comparing output log for test 27.txt
+Comparing transaction summary file for test 27.txt
+Comparing output log for test 28.txt
+Comparing transaction summary file for test 28.txt
+Comparing output log for test 29.txt
+Comparing output log for test 3.txt
+Comparing transaction summary file for test 3.txt
+Comparing output log for test 30.txt
+Comparing output log for test 31.txt
+Comparing output log for test 32.txt
+Comparing transaction summary file for test 32.txt
+Comparing output log for test 33.txt
+Comparing transaction summary file for test 33.txt
+Comparing output log for test 34.txt
+Comparing output log for test 35.txt
+Comparing output log for test 36.txt
+Comparing output log for test 37.txt
+Comparing output log for test 38.txt
+Comparing output log for test 39.txt
+Comparing output log for test 4.txt
+Comparing output log for test 40.txt
+Comparing output log for test 41.txt
+Comparing transaction summary file for test 41.txt
+Comparing output log for test 42.txt
+Comparing transaction summary file for test 42.txt
+Comparing output log for test 43.txt
+Comparing output log for test 44.txt
+Comparing output log for test 45.txt
+Comparing output log for test 46.txt
+Comparing output log for test 47.txt
+Comparing output log for test 48.txt
+Comparing output log for test 49.txt
+Comparing output log for test 5.txt
+Comparing output log for test 50.txt
+Comparing output log for test 51.txt
+Comparing output log for test 52.txt
+Comparing output log for test 6.txt
+Comparing output log for test 7.txt
+Comparing output log for test 8.txt
+Comparing transaction summary file for test 8.txt
+Comparing output log for test 9.txt
