@@ -3,4 +3,4 @@
 > Error: priveleged command
 > Error: priveleged command
 > Logged out
-> 
+>
