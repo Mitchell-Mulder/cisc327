@@ -1,0 +1,449 @@
+
+Comparing output log for test 1.txt
+Comparing output log for test 10.txt
+3,5c3,6
+< > Account number > Account name > Account creation successful
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Enter account number > Enter name > Account creation successful
+> > Enter account number > Error: invalid account number 
+> > 
+> 
+Comparing output log for test 11.txt
+3,4c3,5
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 12.txt
+3,4c3,5
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 13.txt
+3,4c3,5
+< > Account number > Account name > Error: Invalid account name
+< Account name > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 14.txt
+3,4c3,5
+< > Account number > Account name > Error: Invalid account name
+< Account name > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 15.txt
+3d2
+< > Account number > Account name > Account creation successful
+5a5
+> 
+Comparing transaction summary file for test 15.txt
+Comparing output log for test 16.txt
+3d2
+< > Account number > Account name > Account creation successful
+5a5
+> 
+Comparing transaction summary file for test 16.txt
+Comparing output log for test 17.txt
+3,4c3,5
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 18.txt
+3,5c3,5
+< > Account number > Error: Invalid account number
+< Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 19.txt
+3d2
+< > Account number > Account name > Account deletion successful
+5a5
+> 
+Comparing transaction summary file for test 19.txt
+Comparing output log for test 2.txt
+Comparing transaction summary file for test 2.txt
+Comparing output log for test 20.txt
+3,4c3,5
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 21.txt
+3,6c3,5
+< > Account number > Account name > Account deletion successful
+< > Account number > Error: Invalid account number
+< Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 23.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 24.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 25.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 26.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Amount > Error: Invalid amount
+< Amount > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 27.txt
+2,3c2
+< > Logged in as ATM
+< > Account number > Amount > Deposit successful
+---
+> > Logged in as agent
+5a5
+> 
+Comparing transaction summary file for test 27.txt
+Comparing output log for test 28.txt
+3d2
+< > Account number > Amount > Deposit successful
+5a5
+> 
+Comparing transaction summary file for test 28.txt
+Comparing output log for test 29.txt
+3,4c3,5
+< > Account number > Amount > Error: Invalid amount
+< Amount > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 3.txt
+Comparing transaction summary file for test 3.txt
+Comparing output log for test 30.txt
+2,3c2,3
+< > Logged in as ATM
+< > Account number > Amount > Deposit successful
+---
+> > Logged in as agent
+> > Logged out
+4a5
+> 
+Comparing output log for test 31.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 32.txt
+2,3c2
+< > Logged in as ATM
+< > Account number > Amount > Withdrawal successful
+---
+> > Logged in as agent
+5a5
+> 
+Comparing transaction summary file for test 32.txt
+Comparing output log for test 33.txt
+3d2
+< > Account number > Amount > Withdrawal successful
+5a5
+> 
+Comparing transaction summary file for test 33.txt
+Comparing output log for test 34.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 35.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 36.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 37.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Amount > Error: Invalid amount
+< Amount > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 38.txt
+3,4c3,5
+< > Account number > Amount > Error: Invalid amount
+< Amount > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 39.txt
+2,3c2,3
+< > Logged in as ATM
+< > Account number > Amount > Withdrawal successful
+---
+> > Logged in as agent
+> > Logged out
+4a5
+> 
+Comparing output log for test 4.txt
+3c3,5
+< > Error: privileged command
+---
+> > Error: priveleged command
+> > Error: priveleged command
+> > Logged out
+Comparing output log for test 40.txt
+2,4c2,5
+< > Logged in as ATM
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 41.txt
+2,3c2
+< > Logged in as ATM
+< > From account > To account > Amount > Transfer successful
+---
+> > Logged in as agent
+5a5
+> 
+Comparing transaction summary file for test 41.txt
+Comparing output log for test 42.txt
+3d2
+< > From account > To account > Amount > Transfer successful
+5a5
+> 
+Comparing transaction summary file for test 42.txt
+Comparing output log for test 43.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > Error: Invalid first account number
+< From account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 44.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > Error: Invalid first account number
+< From account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 45.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > Error: Invalid first account number
+< From account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 46.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > To account > Error: Invalid second account number
+< To account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 47.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > To account > Error: Invalid second account number
+< To account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 48.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > To account > Error: Invalid second account number
+< To account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 49.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > To account > Amount > Error: Invalid amount
+< Amount > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 5.txt
+1c1
+< > Log in as ATM or agent?
+---
+> > Login as ATM or agent?
+3,5c3
+< > Error: command not recognized
+< > Logged out
+< > 
+\ No newline at end of file
+---
+> > Error: command not recognized >
+\ No newline at end of file
+Comparing transaction summary file for test 5.txt
+Comparing output log for test 50.txt
+3,4c3,5
+< > From account > To account > Amount > Error: Invalid amount
+< Amount > 
+\ No newline at end of file
+---
+> > Logged out
+> > 
+> 
+Comparing output log for test 51.txt
+2,5c2,5
+< > Logged in as ATM
+< > From account > Error: Invalid first account number
+< From account > To account > Error: Invalid second account number
+< To account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 52.txt
+2,4c2,5
+< > Logged in as ATM
+< > From account > To account > Error: Invalid second account number
+< To account > 
+\ No newline at end of file
+---
+> > Logged in as agent
+> > Logged out
+> > 
+> 
+Comparing output log for test 6.txt
+Comparing output log for test 7.txt
+Comparing output log for test 8.txt
+3,4c3
+< > Account number > Account name > Account creation successful
+< > Logged out
+---
+> > Error: invalid account number 
+Comparing transaction summary file for test 8.txt
+Comparing output log for test 9.txt
+3,4c3,5
+< > Account number > Error: Invalid account number
+< Account number > 
+\ No newline at end of file
+---
+> > Enter account number > Error: invalid account number
+> >
+> 
