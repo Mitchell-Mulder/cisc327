@@ -3,4 +3,3 @@ atm
 withdraw
 10101010
 1000o0
-logout

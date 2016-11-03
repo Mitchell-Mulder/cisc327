@@ -3,4 +3,3 @@ agent
 deposit
 10101010
 100000000
-logout

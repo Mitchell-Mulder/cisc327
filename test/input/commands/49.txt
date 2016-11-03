@@ -4,4 +4,3 @@ transfer
 10101010
 10101011
 1o00
-logout

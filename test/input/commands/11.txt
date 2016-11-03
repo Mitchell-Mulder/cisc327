@@ -2,5 +2,3 @@ login
 agent
 create
 123456
-Bryce Marshall
-logout
