@@ -12,7 +12,6 @@ mkdir test/output/transactions
 
 for i in $(ls test/input/commands)
 do
-    pwd
     echo "Running test $i"
     ./main.py test/input/accounts/$i test/output/transactions/$i < test/input/commands/$i > test/output/logs/$i.log
 done
@@ -27,5 +26,5 @@ for i in $(ls test/expected/transactions)
 do
     echo "Checking outputs of test $i" >> ${OUTFILE}
     diff test/output/transactions/$i test/expected/transactions/$i >> ${OUTFILE}
-    diff test/output/logs/$i test/expected/logs/$i.log >> ${OUTFILE}
+    diff test/output/logs/$i.log test/expected/logs/$i >> ${OUTFILE}
 done
