@@ -23,6 +23,7 @@ is written.
 import commands
 import io
 import sys
+import validation
 
 
 def run_agent_mode():
@@ -33,6 +34,7 @@ def run_agent_mode():
     """
     print 'Logged in as agent'
     records = []
+    deleted_accounts = []
     while True:
         line = io.prompt_for_input().lower()
         if line == 'logout':
@@ -40,15 +42,33 @@ def run_agent_mode():
             print 'Logged out'
             return
         elif line == 'transfer':
-            records.append(commands.transfer(True))
+            tmp_transfer = commands.transfer(True)
+            if (validation.validate_deleted(tmp_transfer[1], deleted_accounts) or
+                    validation.validate_deleted(tmp_transfer[2], deleted_accounts)):
+                records.append(tmp_transfer)
+                print 'Transfer successful'
+            else:
+                print 'Error: Account does not exist'
         elif line == 'withdraw':
-            records.append(commands.withdraw(True, {}))
+            tmp_withdraw = commands.withdraw(True, {})
+            if validation.validate_deleted(tmp_withdraw[1], deleted_accounts):
+                records.append(tmp_withdraw)
+                print 'Withdraw successful'
+            else:
+                print 'Error: Account does not exist'
         elif line == 'deposit':
-            records.append(commands.deposit(True))
+            tmp_deposit = commands.deposit(True)
+            if validation.validate_deleted(tmp_deposit[1], deleted_accounts):
+                records.append(tmp_deposit)
+                print 'Deposit successful'
+            else:
+                print 'Error: Account does not exist'
         elif line == 'create':
             records.append(commands.create())
         elif line == 'delete':
-            records.append(commands.delete())
+            tmp_delete = commands.delete()
+            records.append(tmp_delete)
+            deleted_accounts.append(tmp_delete[1])
         else:
             print 'Error: command not recognized'
 

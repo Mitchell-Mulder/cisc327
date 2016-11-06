@@ -68,3 +68,10 @@ def validate_amount(num, is_agent=False, session_withdrawals=0):
             return True
     except ValueError:
         return False
+
+
+def validate_deleted(account_num, deleted_accounts):
+    for i in range(0, len(deleted_accounts)):
+        if account_num == deleted_accounts[i]:
+            return False
+    return True

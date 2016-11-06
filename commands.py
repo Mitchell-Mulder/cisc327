@@ -50,7 +50,8 @@ def transfer(is_agent):
     from_account = prompt_for_account_number('From account', 'Invalid first account number')
     to_account = prompt_for_account_number('To account', 'Invalid second account number')
     amount = prompt_for_amount('Amount', 'Invalid amount', is_agent)
-    print 'Transfer successful'
+    if not is_agent:
+        print 'Transfer successful'
     return ['transfer', from_account, to_account, amount]
 
 
@@ -64,7 +65,8 @@ def withdraw(is_agent, existing_withdrawals):
     else:
         session_withdrawals = 0
     amount = prompt_for_amount('Amount', 'Invalid amount', is_agent, session_withdrawals)
-    print 'Withdrawal successful'
+    if not is_agent:
+        print 'Withdrawal successful'
     return ['withdraw', account_number, amount]
 
 
@@ -74,7 +76,8 @@ def deposit(is_agent):
     """
     account_number = prompt_for_account_number('Account number', 'Invalid account number')
     amount = prompt_for_amount('Amount', 'Invalid amount', is_agent)
-    print 'Deposit successful'
+    if not is_agent:
+        print 'Deposit successful'
     return ['deposit', account_number, amount]
 
 
