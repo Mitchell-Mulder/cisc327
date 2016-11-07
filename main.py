@@ -21,7 +21,7 @@ is written.
 """
 
 import commands
-import io
+import inputOutput
 import sys
 import validation
 
@@ -36,9 +36,9 @@ def run_agent_mode():
     records = []
     deleted_accounts = []
     while True:
-        line = io.prompt_for_input().lower()
+        line = inputOutput.prompt_for_input().lower()
         if line == 'logout':
-            io.write_summary_file(records, sys.argv[2])
+            inputOutput.write_summary_file(records, sys.argv[2])
             print 'Logged out'
             return
         elif line == 'transfer':
@@ -83,9 +83,9 @@ def run_atm_mode():
     records = []
     withdrawals = {}
     while True:
-        line = io.prompt_for_input().lower()
+        line = inputOutput.prompt_for_input().lower()
         if line == 'logout':
-            io.write_summary_file(records, sys.argv[2])
+            inputOutput.write_summary_file(records, sys.argv[2])
             print 'Logged out'
             return
         elif line == 'transfer':
@@ -115,11 +115,11 @@ def run_main_loop():
     """
     while True:
         try:
-            prompt = io.prompt_for_input().lower()
+            prompt = inputOutput.prompt_for_input().lower()
             if prompt == 'login':
                 while True:
                     print 'Log in as ATM or agent?'
-                    mode_prompt = io.prompt_for_input().lower()
+                    mode_prompt = inputOutput.prompt_for_input().lower()
                     if mode_prompt == 'atm':
                         run_atm_mode()
                         break

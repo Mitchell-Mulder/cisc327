@@ -1,4 +1,4 @@
-import io
+import inputOutput
 import validation
 
 
@@ -7,15 +7,15 @@ def prompt_for_account_number(prompt_message, error_message, should_exist=True):
     Repeatedly prompt the user for a valid account number.
     Return the number once it is successfully provided.
     """
-    number = io.prompt_for_input(prompt_message)
+    number = inputOutput.prompt_for_input(prompt_message)
     if should_exist:
         while not (validation.validate_account_number(number) and validation.account_number_exists(number)):
             print 'Error: ' + error_message
-            number = io.prompt_for_input(prompt_message)
+            number = inputOutput.prompt_for_input(prompt_message)
     else:
         while (not validation.validate_account_number(number, False)) or validation.account_number_exists(number):
             print 'Error: ' + error_message
-            number = io.prompt_for_input(prompt_message)
+            number = inputOutput.prompt_for_input(prompt_message)
     return int(number)
 
 
@@ -24,10 +24,10 @@ def prompt_for_amount(prompt_message, error_message, is_agent, session_withdrawa
     Repeatedly prompt the user for a valid amount in cents.
     Return the amount once it is successfully provided.
     """
-    number = io.prompt_for_input(prompt_message)
+    number = inputOutput.prompt_for_input(prompt_message)
     while not validation.validate_amount(number, is_agent, session_withdrawals):
         print 'Error: ' + error_message
-        number = io.prompt_for_input(prompt_message)
+        number = inputOutput.prompt_for_input(prompt_message)
     return int(number)
 
 
@@ -36,10 +36,10 @@ def prompt_for_account_name(prompt_message, error_message):
     Repeatedly prompt the user for a valid account name.
     Return the name once it is successfully provided.
     """
-    name = io.prompt_for_input(prompt_message)
+    name = inputOutput.prompt_for_input(prompt_message)
     while not validation.validate_name(name):
         print 'Error: ' + error_message
-        name = io.prompt_for_input(prompt_message)
+        name = inputOutput.prompt_for_input(prompt_message)
     return name
 
 
