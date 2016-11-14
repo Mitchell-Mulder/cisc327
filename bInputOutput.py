@@ -2,6 +2,10 @@ import os
 
 
 def merge_transactions():
+    """
+    This function reads in all the transaction summary files
+    and merges them into one list to easily be read.
+    """
     transactions = []
     path = os.getcwd() + '/test/output/transactions/'
     for filename in os.listdir(path):
@@ -16,6 +20,9 @@ def merge_transactions():
 
 
 def read_master_accounts():
+    """
+    This function opens the master accounts file to be written into a list.
+    """
     accounts = []
     with open('master_accounts.txt') as f:
         content = f.readlines()
@@ -28,6 +35,10 @@ def read_master_accounts():
 
 
 def write_accounts(accounts):
+    """
+    This function takes in the master account list and returns a valid
+    account file in the test/input/accounts/ folder.
+    """
     account = open('test/input/accounts/accounts.txt', 'w')
     for i in range(0, len(accounts)):
         account.write(accounts[i][0] + '\n')
@@ -35,6 +46,10 @@ def write_accounts(accounts):
 
 
 def write_master_accounts(accounts):
+    """
+    This function takes in the master accounts list and returns a updated
+    master accounts file in increasing order.
+    """
     master_account = open('master_accounts.txt', 'w')
     accounts = sorted(accounts, key=lambda account: accounts[0])
     for i in range(0, len(accounts)):
