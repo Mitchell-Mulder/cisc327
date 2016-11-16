@@ -26,20 +26,19 @@ def main():
     file depending what transaction is requested.
     """
     for i in range(len(transactions)):
-        if accounts is None:
-            print "Fatal error"
-            bInputOutput.write_master_accounts([])
-            return
-        if transactions[i][0] == 'WD':
-            accounts = bCommands.withdraw(transactions[i], accounts)
-        elif transactions[i][0] == 'DE':
-            accounts = bCommands.deposit(transactions[i], accounts)
-        elif transactions[i][0] == 'TR':
-            accounts = bCommands.transfer(transactions[i], accounts)
-        elif transactions[i][0] == 'DL':
-            accounts = bCommands.delete(transactions[i], accounts)
-        else:
-            accounts = bCommands.create(transactions[i], accounts)
+        try:
+            if transactions[i][0] == 'WD':
+                accounts = bCommands.withdraw(transactions[i], accounts)
+            elif transactions[i][0] == 'DE':
+                accounts = bCommands.deposit(transactions[i], accounts)
+            elif transactions[i][0] == 'TR':
+                accounts = bCommands.transfer(transactions[i], accounts)
+            elif transactions[i][0] == 'DL':
+                accounts = bCommands.delete(transactions[i], accounts)
+            else:
+                accounts = bCommands.create(transactions[i], accounts)
+        except RuntimeError:
+            print 'Fatal Error: Process Aborted.'
     bInputOutput.write_master_accounts(accounts)
     bInputOutput.write_accounts(accounts)
     return

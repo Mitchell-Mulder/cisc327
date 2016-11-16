@@ -11,7 +11,7 @@ def merge_transactions():
     for filename in os.listdir(path):
         with open('test/output/transactions/' + filename) as f:
                 content = f.readlines()
-        if len(content) > 1:
+        if len(content) >= 1:
             for i in range(0, len(content)-1):
                 transactions.append(content[i])
     for i in range(len(transactions)):
