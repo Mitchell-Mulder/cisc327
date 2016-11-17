@@ -26,7 +26,7 @@ def read_master_accounts():
     accounts = []
     with open('master_accounts.txt') as f:
         content = f.readlines()
-    if len(content) > 1:
+    if len(content) >= 1:
         for i in range(0, len(content)):
             accounts.append(content[i])
     for i in range(len(accounts)):
