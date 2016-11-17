@@ -19,9 +19,9 @@ def withdraw(transaction, accounts):
     """
     num = find_account(transaction[2], accounts)
     if not num:
-        return None
+        raise RuntimeError
     elif int(accounts[num-1][1]) - int(transaction[3]) < 0:
-        return None
+        raise RuntimeError
     else:
         accounts[num-1][1] = str(int(accounts[num-1][1]) - int(transaction[3]))
         return accounts
@@ -78,11 +78,11 @@ def delete(transaction, accounts):
     """
     num = find_account(transaction[1], accounts)
     if not num:
-        return None
+        raise RuntimeError
     elif int(accounts[num-1][1]) != 0:
-        return None
+        raise RuntimeError
     elif transaction[4] != accounts[num+1][2]:
-        return None
+        raise RuntimeError
     else:
         accounts.remove([accounts[num-1][0], accounts[num-1][1], accounts[num+1][2]])
         return accounts
