@@ -19,7 +19,7 @@ def withdraw(transaction, accounts):
     """
     num = find_account(transaction[2], accounts)
     if not num:
-        return accounts
+        return None
     elif int(accounts[num-1][1]) - int(transaction[3]) < 0:
         return None
     else:
@@ -34,7 +34,7 @@ def deposit(transaction, accounts):
     """
     num = find_account(transaction[1], accounts)
     if not num:
-        return accounts
+        return None
     else:
         accounts[num-1][1] = str(int(accounts[num-1][1]) + int(transaction[3]))
         return accounts
@@ -48,7 +48,7 @@ def transfer(transaction, accounts):
     num1 = find_account(transaction[1], accounts)
     num2 = find_account(transaction[2], accounts)
     if not (num1 and num2):
-        return accounts
+        return None
     elif int(accounts[num2-1][1]) - int(transaction[3]) < 0:
         return None
     else:
@@ -78,7 +78,7 @@ def delete(transaction, accounts):
     """
     num = find_account(transaction[1], accounts)
     if not num:
-        return accounts
+        return None
     elif int(accounts[num-1][1]) != 0:
         return None
     elif transaction[4] != accounts[num+1][2]:
