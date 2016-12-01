@@ -23,7 +23,7 @@ import sys
 
 def main():
     transactions = bInputOutput.merge_transactions(sys.argv[3])
-    accounts = bInputOutput.read_master_accounts(sys.argv[2])
+    accounts = bInputOutput.read_master_accounts(sys.argv[1])
     """
     This loops through the transactions updating the master accounts
     file depending what transaction is requested.
@@ -42,8 +42,8 @@ def main():
                 accounts = bCommands.create(transactions[i], accounts)
         except RuntimeError:
             print 'Fatal Error: Process Aborted.'
-    bInputOutput.write_master_accounts(accounts, sys.argv[2])  # test/input/accounts/accounts.txt
-    bInputOutput.write_accounts(accounts, sys.argv[1])  # master_accounts.txt
+    bInputOutput.write_master_accounts(accounts, sys.argv[1])  # test/input/accounts/accounts.txt
+    bInputOutput.write_accounts(accounts, sys.argv[2])  # master_accounts.txt
     return
 
 

@@ -53,7 +53,6 @@ def write_master_accounts(accounts, path):
     master_account = open(path, 'w')
     accounts = sorted(accounts, key=lambda account: accounts[0])
     for i in range(0, len(accounts)):
-        print i
         master_account.write('{} {} {}'.format(accounts[i][0], accounts[i][1], accounts[i][2]))
     master_account.close()
     return
