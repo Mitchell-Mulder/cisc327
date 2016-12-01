@@ -7,9 +7,9 @@ def merge_transactions(path):
     and merges them into one list to easily be read.
     """
     transactions = []
-    path = os.getcwd() + '/test/output/transactions/'
+    path = os.getcwd() + path
     for filename in os.listdir(path):
-        with open('test/output/transactions/' + filename) as f:
+        with open(path + filename) as f:
                 content = f.readlines()
         if len(content) >= 1:
             for i in range(0, len(content)-1):
