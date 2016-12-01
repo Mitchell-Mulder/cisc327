@@ -1,15 +1,15 @@
 import os
 
 
-def merge_transactions():
+def merge_transactions(path):
     """
     This function reads in all the transaction summary files
     and merges them into one list to easily be read.
     """
     transactions = []
-    path = os.getcwd() + '/test/output/transactions/'
+    path = os.getcwd() + path
     for filename in os.listdir(path):
-        with open('test/output/transactions/' + filename) as f:
+        with open(path + filename) as f:
                 content = f.readlines()
         if len(content) >= 1:
             for i in range(0, len(content)-1):
@@ -19,12 +19,12 @@ def merge_transactions():
     return transactions
 
 
-def read_master_accounts():
+def read_master_accounts(path):
     """
     This function opens the master accounts file to be written into a list.
     """
     accounts = []
-    with open('master_accounts.txt') as f:
+    with open(path) as f:
         content = f.readlines()
     if len(content) >= 1:
         for i in range(0, len(content)):
@@ -34,23 +34,23 @@ def read_master_accounts():
     return accounts
 
 
-def write_accounts(accounts):
+def write_accounts(accounts, path):
     """
     This function takes in the master account list and returns a valid
     account file in the test/input/accounts/ folder.
     """
-    account = open('test/input/accounts/accounts.txt', 'w')
+    account = open(path, 'w')
     for i in range(0, len(accounts)):
         account.write(accounts[i][0] + '\n')
     account.close()
 
 
-def write_master_accounts(accounts):
+def write_master_accounts(accounts, path):
     """
     This function takes in the master accounts list and returns a updated
     master accounts file in increasing order.
     """
-    master_account = open('master_accounts.txt', 'w')
+    master_account = open(path, 'w')
     accounts = sorted(accounts, key=lambda account: accounts[0])
     for i in range(0, len(accounts)):
         master_account.write('{} {} {}'.format(accounts[i][0], accounts[i][1], accounts[i][2]))
