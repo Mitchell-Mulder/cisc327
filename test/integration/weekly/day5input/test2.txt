@@ -1,0 +1,13 @@
+login
+agent
+deposit
+10000006
+1200
+withdraw
+10000005
+4000
+transfer
+10000003
+10000002
+77000
+logout
