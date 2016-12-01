@@ -1,9 +1,9 @@
 login
 atm
-deposit
-10000002
-10000
 withdraw
 10000003
-345679
+5721
+deposit
+10000001
+10000
 logout
