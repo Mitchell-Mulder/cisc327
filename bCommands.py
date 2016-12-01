@@ -32,7 +32,7 @@ def deposit(transaction, accounts):
     This function takes in the merged transaction summary file and the master
     accounts list and updates the master accounts list with the specified transaction.
     """
-    num = find_account(transaction[0], accounts)
+    num = find_account(transaction[1], accounts)
     if not num:
         raise RuntimeError
     else:
@@ -62,11 +62,11 @@ def create(transaction, accounts):
     This function takes in the merged transaction summary file and the master
     accounts list and updates the master accounts list with the specified transaction.
     """
-    num = find_account(transaction[0], accounts)
+    num = find_account(transaction[1], accounts)
     if num:
         raise RuntimeError
     else:
-        transaction = [transaction[0], '000', transaction[3]]
+        transaction = [transaction[1], '000', transaction[4]]
         accounts.append(transaction)
         return accounts
 

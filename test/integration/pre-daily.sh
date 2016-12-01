@@ -8,6 +8,3 @@ cp test/integration/accounts.txt $1/accounts.txt
 cp test/integration/master_accounts.txt $1/master_accounts.txt
 rm -rf $1/transactions
 mkdir $1/transactions
-
-
-test/integration/daily.sh test/integration/weekly
