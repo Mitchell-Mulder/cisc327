@@ -1,0 +1,7 @@
+login
+atm
+transfer
+10000007
+10000006
+999999
+logout
