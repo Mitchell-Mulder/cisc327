@@ -1,0 +1,9 @@
+login
+atm
+withdraw
+12345678
+111
+deposit
+12345678
+111
+logout
