@@ -42,6 +42,7 @@ def write_accounts(accounts, path):
     account = open(path, 'w')
     for i in range(0, len(accounts)):
         account.write(accounts[i][0] + '\n')
+    accounts.write('00000000')
     account.close()
 
 
