@@ -1,15 +1,9 @@
 login
-agent
-deposit
-10000006
-134500
-deposit
+atm
+create
 10000003
-125300
-withdraw
-10000008
-6000000
-delete
-10000008
-Irene Lafleche
+Mitch Mulder
+create
+10000005
+Jim Cordy
 logout

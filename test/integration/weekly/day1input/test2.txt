@@ -1,26 +1,10 @@
 login
-atm
-deposit
-10000001
-186000
-deposit
-10000002
-125300
-deposit
-10000003
-1200000
-deposit
-10000004
-4625300
-deposit
-10000005
-16000000
-deposit
-10000006
-3027800
-deposit
+agent
+Margaret Lamb
+create
 10000007
-792000
-deposit
+Juergen Dingel
+create
 10000008
-6000000
+Irene Lafleche
+logout
