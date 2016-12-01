@@ -6,19 +6,4 @@ Bryce Marshall
 create
 10000002
 Brandon Bloch
-create
-10000003
-Mitch Mulder
-create
-10000005
-Jim Cordy
-create
-10000006
-Margaret Lamb
-create
-10000007
-Juergen Dingel
-create
-10000008
-Irene Lafleche
 logout
