@@ -9,6 +9,7 @@ for i in `seq 5`
 do
     rm -rf ${WEEKLY_DIR}/input
     cp -r ${WEEKLY_DIR}/day${i}input ${WEEKLY_DIR}/input
-    test/integration/daily.sh ${WEEKLY_DIR}
     rm -rf ${WEEKLY_DIR}/transactions
+    mkdir ${WEEKLY_DIR}/transactions
+    test/integration/daily.sh ${WEEKLY_DIR}
 done
