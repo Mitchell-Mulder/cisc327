@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# CLEAN UP AND PREPARE FOR TEST
-# ---
-# Delete any output folders remaining from previous tests
-
 WEEKLY_DIR=test/integration/weekly
 
 cp test/integration/weekly_accounts.txt ${WEEKLY_DIR}/accounts.txt
