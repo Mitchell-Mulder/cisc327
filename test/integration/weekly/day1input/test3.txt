@@ -1,5 +1,5 @@
 login
-atm
+agent
 create
 10000003
 Mitch Mulder

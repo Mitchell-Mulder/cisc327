@@ -1,5 +1,5 @@
 login
-atm
+agent
 deposit
 10000001
 186000
@@ -24,4 +24,4 @@ deposit
 deposit
 10000008
 6000000
-
+logout

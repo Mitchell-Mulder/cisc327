@@ -1,7 +1,7 @@
 login
-atm
+agent
 transfer
 10000007
 10000006
-999999
+99999
 logout
