@@ -8,7 +8,7 @@
 for i in $(ls $1/input)
 do
     echo "Running test $i"
-    ./main.py $1/accounts.txt $1/transactions/$i < $1/input/$i
+    ./main.py $1/accounts.txt $1/transactions/$i < $1/input/$i > /dev/null
 done
 
 ./backend.py $1/master_accounts.txt $1/accounts.txt $1/transactions
