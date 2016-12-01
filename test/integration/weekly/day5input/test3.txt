@@ -1,0 +1,13 @@
+login
+atm
+deposit
+10000002
+400000
+transfer
+10000001
+10000003
+7750
+withdraw
+10000007
+88822
+logout
