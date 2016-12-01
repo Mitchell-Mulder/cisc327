@@ -13,4 +13,5 @@ do
     rm -rf ${WEEKLY_DIR}/transactions
     mkdir ${WEEKLY_DIR}/transactions
     test/integration/daily.sh ${WEEKLY_DIR}
+    cp ${WEEKLY_DIR}/master_accounts.txt ${WEEKLY_DIR}/master_accounts_afterday${i}.txt
 done
