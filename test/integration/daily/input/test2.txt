@@ -2,8 +2,5 @@ login
 atm
 withdraw
 12345678
-300
-create
-12345679
-mitch
+100
 logout

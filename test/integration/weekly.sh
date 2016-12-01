@@ -4,10 +4,15 @@
 # ---
 # Delete any output folders remaining from previous tests
 
-cp test/integration/accounts.txt $1/accounts.txt
-cp test/integration/master_accounts.txt $1/master_accounts.txt
-rm -rf $1/transactions
-mkdir $1/transactions
+WEEKLY_DIR=test/integration/weekly
 
+cp test/integration/weekly_accounts.txt ${WEEKLY_DIR}/accounts.txt
+cp test/integration/weekly_master_accounts.txt ${WEEKLY_DIR}/master_accounts.txt
 
-test/integration/daily.sh test/integration/weekly
+for i in `seq 5`
+do
+    rm -rf ${WEEKLY_DIR}/input
+    cp -r ${WEEKLY_DIR}/day${i}input ${WEEKLY_DIR}/input
+    test/integration/daily.sh ${WEEKLY_DIR}
+    rm -rf ${WEEKLY_DIR}/transactions
+done
