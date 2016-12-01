@@ -6,8 +6,8 @@
 
 WEEKLY_DIR=test/integration/weekly
 
-cp test/integration/accounts.txt ${WEEKLY_DIR}/accounts.txt
-cp test/integration/master_accounts.txt ${WEEKLY_DIR}/master_accounts.txt
+cp test/integration/weekly_accounts.txt ${WEEKLY_DIR}/accounts.txt
+cp test/integration/weekly_master_accounts.txt ${WEEKLY_DIR}/master_accounts.txt
 
 for i in `seq 5`
 do
