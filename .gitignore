@@ -1,5 +1,12 @@
 *.pyc
 TSF*.txt
 test/output
+test/integration/daily/transactions
+test/integration/daily/accounts.txt
+test/integration/daily/master_accounts.txt
+test/integration/weekly/input
+test/integration/weekly/transactions
+test/integration/weekly/accounts.txt
+test/integration/weekly/master_accounts.txt
 test/results_*.txt
 .idea/
