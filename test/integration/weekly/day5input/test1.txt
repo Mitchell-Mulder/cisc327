@@ -1,0 +1,6 @@
+login
+agent
+create
+10000009
+John Doe
+logout
